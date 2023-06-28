@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://32ond5dpmws7"]
+
+[ext_resource type="Texture2D" uid="uid://bc4kq3jh6iocr" path="res://art/ArmyAnt.png" id="1_go2rn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxmle"]
+size = Vector2(32, 38)
+
+[node name="ArmyAnt" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_go2rn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_hxmle")

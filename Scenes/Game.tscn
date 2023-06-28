@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6f76dxmwfjn5"]
+
+[ext_resource type="PackedScene" uid="uid://bvx4duxywow2f" path="res://Chars/scout_ant.tscn" id="1_tvpos"]
+
+[sub_resource type="TileSet" id="TileSet_6s3ge"]
+
+[node name="Game" type="Node2D"]
+
+[node name="ScoutAnt" parent="." instance=ExtResource("1_tvpos")]
+position = Vector2(32.2937, 62.1992)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_6s3ge")
+format = 2

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvx4duxywow2f"]
+
+[ext_resource type="Texture2D" uid="uid://bcc0hoqr6w14s" path="res://art/ScoutAnt.png" id="1_u2a6b"]
+[ext_resource type="Script" path="res://Chars/scout_ant.gd" id="1_ynln5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxmle"]
+size = Vector2(33, 38)
+
+[node name="ScoutAnt" type="CharacterBody2D"]
+script = ExtResource("1_ynln5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u2a6b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_hxmle")
