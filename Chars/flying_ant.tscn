@@ -1,15 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://6gdvojmeetfj"]
+[gd_scene load_steps=5 format=3 uid="uid://6gdvojmeetfj"]
 
+[ext_resource type="Script" path="res://Chars/flying_ant.gd" id="1_ggf5l"]
 [ext_resource type="Texture2D" uid="uid://5scq7tv4d6g1" path="res://art/FlyingAnt.png" id="1_xargg"]
+[ext_resource type="Script" path="res://Chars/MovementController.gd" id="3_gfyfo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxmle"]
-size = Vector2(33, 38)
+size = Vector2(6, 8)
 
 [node name="FlyingAnt" type="CharacterBody2D"]
+script = ExtResource("1_ggf5l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_xargg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_hxmle")
+
+[node name="MovementController" type="Node2D" parent="."]
+script = ExtResource("3_gfyfo")

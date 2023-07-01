@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvrne0pky5fnl"]
+
+[ext_resource type="Script" path="res://art/ClickEffect.gd" id="1_8dwgr"]
+
+[node name="ClickEffect" type="Node2D"]
+script = ExtResource("1_8dwgr")

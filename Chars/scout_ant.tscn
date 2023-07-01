@@ -1,17 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvx4duxywow2f"]
+[gd_scene load_steps=5 format=3 uid="uid://bvx4duxywow2f"]
 
 [ext_resource type="Texture2D" uid="uid://bcc0hoqr6w14s" path="res://art/ScoutAnt.png" id="1_u2a6b"]
 [ext_resource type="Script" path="res://Chars/scout_ant.gd" id="1_ynln5"]
+[ext_resource type="Script" path="res://Chars/MovementController.gd" id="3_dbo76"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxmle"]
-size = Vector2(33, 38)
+size = Vector2(6, 8)
 
 [node name="ScoutAnt" type="CharacterBody2D"]
 script = ExtResource("1_ynln5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_u2a6b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_hxmle")
+
+[node name="MovementController" type="Node2D" parent="."]
+script = ExtResource("3_dbo76")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[connection signal="path_changed" from="." to="." method="_on_path_changed"]
+[connection signal="path_changed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_path_changed"]
